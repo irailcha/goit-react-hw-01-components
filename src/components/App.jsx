@@ -1,16 +1,39 @@
+
+import Profile from './Profile/Profile'
+import Statistics from './Statistics/Statistics'
+import FriendList from './FriendList/FriendList'
+import TransactionHistory from './TransactionHistory/TransactionHistory'
+import user from '../data/user'
+import data from '../data/data'
+import friends from '../data/friends'
+import transactions from '../data/transactions'
+
+import GlobalStyle from './GlobalStyle'
+
+
 export const App = () => {
+  const title = "Upload stats";
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="app">
+    <Profile
+        user={user}
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+
+
+     {title ? (
+        <Statistics title={title} stats={data} />) : (<Statistics stats={data} />
+      )}
+
+   <FriendList friends={friends} />;
+
+    <TransactionHistory items={transactions} />;
+    <GlobalStyle/>
+    
     </div>
   );
 };
