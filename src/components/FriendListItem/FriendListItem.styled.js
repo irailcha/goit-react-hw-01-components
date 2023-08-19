@@ -18,7 +18,7 @@ export const StyleStatus = styled.span`
   $isOnline?: boolean;
   width: 20px;
   height: 20px;
-  background-color: ${props => (props.$isOnline ? "green" : "red")};
+  background-color: ${props => (props.status ? "#208000" : "#FF0021")};
   border-radius: 50%; 
   display: inline-block; 
 `;

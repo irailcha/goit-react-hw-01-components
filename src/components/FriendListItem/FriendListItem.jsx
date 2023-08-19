@@ -5,7 +5,7 @@ import {FriendItem, StyleStatus, StyleAvatar, StyledName} from './FriendListItem
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendItem className="item">
-      <StyleStatus className={isOnline}></StyleStatus>
+      <StyleStatus status={isOnline} className={isOnline}></StyleStatus>
       <StyleAvatar className="avatar" src={avatar} alt="User avatar" width="48" />
       <StyledName className="name">{name}</StyledName>
     </FriendItem>
