@@ -38,7 +38,7 @@ const Profile = ({username, tag, location, avatar, stats}) => {
 };
 
 Profile.propTypes = {
-  user: PropTypes.shape({
+  
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
@@ -48,7 +48,7 @@ Profile.propTypes = {
       views: PropTypes.number.isRequired,
       likes: PropTypes.number.isRequired,
     }).isRequired,
-  }).isRequired,
+
 };
 
 export default Profile;
